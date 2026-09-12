@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Guideway Academy courses across design, business, marketing, and professional development." />
+  <title>Courses | Guideway Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="courses.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="courses-page">
+  <header class="site-header course-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html#top" aria-label="Guideway Academy home"><img class="brand-logo" src="image/logo.svg" alt="Guideway Academy" /></a>
+      <div class="nav-links" id="nav-links">
+        <a class="nav-link" href="index.html#top">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <div class="nav-dropdown">
+          <a class="nav-link nav-dropdown-trigger active" href="courses.html" aria-haspopup="true" aria-expanded="false">Courses <i data-lucide="chevron-down"></i></a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="course-details.html#school-design" role="menuitem">School of Creative and Digital Design</a>
+            <a href="course-details.html#school-business" role="menuitem">School of Accountancy and Business Operations</a>
+            <a href="course-details.html#school-growth" role="menuitem">School of Marketing Sales and Customer Growth</a>
+            <a href="course-details.html#school-foundation" role="menuitem">School of Foundation and Professional Development</a>
+          </div>
+        </div>
+        <a class="nav-link" href="stories.html">Student Stories</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions"><a class="button button-small button-dark" href="#catalogue">Explore Courses <i data-lucide="arrow-up-right"></i></a><button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><i data-lucide="menu"></i></button></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="course-hero">
+      <div class="container course-hero-grid">
+        <div class="course-hero-copy reveal">
+          <div class="eyebrow"><span class="eyebrow-line"></span> Your next chapter</div>
+          <h1>Find the course<br />that moves you <em>forward.</em></h1>
+          <p>Focused learning paths, generous teachers, and practical projects for the work and life you are building.</p>
+          <div class="course-stat-row"><div><strong>24</strong><span>active courses</span></div><div><strong>4</strong><span>specialist schools</span></div><div><strong>12k+</strong><span>curious learners</span></div></div>
+          <div class="hero-course-banners" aria-label="Guideway schools"><a class="hero-course-banner banner-blue is-active" href="#creative"><img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=180&q=80" alt="" /><span><small>School 01</small><strong>Creative &amp; Digital Design</strong></span><i data-lucide="arrow-up-right"></i></a><a class="hero-course-banner banner-yellow" href="#business"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=180&q=80" alt="" /><span><small>School 02</small><strong>Accountancy &amp; Business</strong></span><i data-lucide="arrow-up-right"></i></a><a class="hero-course-banner banner-coral" href="#leadership"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=180&q=80" alt="" /><span><small>School 03</small><strong>Marketing &amp; Customer Growth</strong></span><i data-lucide="arrow-up-right"></i></a><a class="hero-course-banner banner-green" href="#future"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=180&q=80" alt="" /><span><small>School 04</small><strong>Foundation &amp; Professional Development</strong></span><i data-lucide="arrow-up-right"></i></a></div>
+        </div>
+        <div class="course-hero-art reveal reveal-delay"><div class="art-ring ring-a"></div><div class="art-ring ring-b"></div><div class="hero-art-photo"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1000&q=85" alt="A teacher guiding learners in a workshop" /></div><div class="art-note note-one">Learn<br /><em>out loud.</em></div><div class="art-note note-two"><i data-lucide="sparkles"></i><span>Start<br />curious</span></div></div>
+      </div>
+    </section>
+
+    <section class="school-strip" aria-label="Academy schools"><div class="container school-strip-inner"><span class="school-strip-label">Browse by school</span><a href="#creative">Creative &amp; Digital Design</a><a href="#business">Accountancy &amp; Business</a><a href="#leadership">Marketing &amp; Customer Growth</a><a href="#future">Foundation &amp; Professional Development</a></div></section>
+
+    <section class="catalogue-section" id="catalogue">
+      <div class="container">
+        <div class="catalogue-toolbar"><div><div class="eyebrow"><span class="eyebrow-line"></span> The catalogue</div><h2>Choose your<br /><em>next skill.</em></h2></div><div class="catalogue-tools"><label class="course-search"><i data-lucide="search"></i><input id="course-search" type="search" placeholder="Search courses" aria-label="Search courses" /><button class="search-clear" type="button" aria-label="Clear course search"><i data-lucide="x"></i></button></label><div class="course-filters" role="group" aria-label="Filter courses"><button class="filter-button is-active" data-filter="all">All courses</button><button class="filter-button" data-filter="design">Design</button><button class="filter-button" data-filter="future">Future skills</button><button class="filter-button" data-filter="leadership">Leadership</button></div></div></div>
+        <div class="catalogue-grid">
+          <a id="creative" class="course-tile tile-design" data-category="design" href="#creative"><div class="tile-image"><img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=85" alt="Colorful design materials" loading="lazy" /><span class="tile-label">Creative practice</span></div><div class="tile-body"><span class="tile-school">School of Creative and Digital Design</span><h3>Design for humans</h3><p>Turn observation into ideas people can feel, use, and remember.</p><div class="tile-meta"><span>6 weeks</span><span>Beginner friendly</span><i data-lucide="arrow-up-right"></i></div></div></a>
+          <a id="future" class="course-tile tile-future" data-category="future" href="#future"><div class="tile-image"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=85" alt="Laptop used for digital learning" loading="lazy" /><span class="tile-label">Future skills</span></div><div class="tile-body"><span class="tile-school">School of Foundation and Professional Development</span><h3>Digital confidence</h3><p>Build a practical toolkit for the tools shaping the way we work.</p><div class="tile-meta"><span>4 weeks</span><span>Project based</span><i data-lucide="arrow-up-right"></i></div></div></a>
+          <a id="leadership" class="course-tile tile-leadership" data-category="leadership" href="#leadership"><div class="tile-image"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=85" alt="Friends learning together" loading="lazy" /><span class="tile-label">Life &amp; leadership</span></div><div class="tile-body"><span class="tile-school">School of Marketing Sales and Customer Growth</span><h3>Lead with clarity</h3><p>Find your voice, make better decisions, and move people with you.</p><div class="tile-meta"><span>5 weeks</span><span>Community led</span><i data-lucide="arrow-up-right"></i></div></div></a>
+          <a id="business" class="course-tile tile-business" data-category="future" href="#business"><div class="tile-image"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=85" alt="Team planning together" loading="lazy" /><span class="tile-label">Business operations</span></div><div class="tile-body"><span class="tile-school">School of Accountancy and Business Operations</span><h3>Build better systems</h3><p>Make the everyday work clearer, calmer, and ready to grow.</p><div class="tile-meta"><span>8 weeks</span><span>Intermediate</span><i data-lucide="arrow-up-right"></i></div></div></a>
+        </div>
+        <div class="catalogue-empty" aria-live="polite">No courses in this path yet.</div>
+      </div>
+    </section>
+
+    <section class="course-promise container"><div class="promise-image"><img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1000&q=85" alt="Learners collaborating at a table" /></div><div class="promise-copy"><div class="eyebrow"><span class="eyebrow-line"></span> How every course works</div><h2>Learn something<br /><em>worth keeping.</em></h2><p>Every course combines clear thinking, real practice, and a community that helps you keep going when the work gets interesting.</p><div class="promise-list"><span><b>01</b>Short, focused lessons</span><span><b>02</b>Useful projects to share</span><span><b>03</b>Feedback from real people</span></div><a class="text-link" href="index.html#method">Discover our method <i data-lucide="arrow-up-right"></i></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="index.html#top"><img class="brand-logo" src="image/logo.svg" alt="Guideway Academy" /></a><p>Thoughtful learning for curious people.</p><div class="footer-links"><a href="about.html">About</a><a href="stories.html">Stories</a><a href="#catalogue">Courses</a></div><span class="copyright">© 2024 Guideway Academy</span></div></footer>
+  <script src="courses.js"></script>
+</body>
+</html>
