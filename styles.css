@@ -55,7 +55,7 @@ html,body{overflow-x:hidden}
 .brand-logo{display:block;width:200px;height:94px;object-fit:contain;max-width:none}
 .nav{height:104px!important}
 body{padding-top:104px!important}
-@media(max-width:650px){.brand-logo{width:150px;height:70px}.nav{height:82px!important}body{padding-top:82px!important}.nav-dropdown{display:block}.nav-dropdown-menu{position:static;width:100%;margin:7px 0 2px;padding:5px;box-shadow:none;transform:none;border-color:#edf0f4}.nav-dropdown-menu:before{display:none}.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{transform:none}.nav-dropdown-menu a{font-size:10px;padding:9px 10px}}
+@media(max-width:650px){.brand-logo{width:150px;height:70px}.nav{height:82px!important}body{padding-top:82px!important}.nav-dropdown{display:block}.nav-dropdown-menu{position:static;width:100%;margin:7px 0 2px;padding:5px;box-shadow:none;opacity:1;pointer-events:auto;transform:none;border-color:#edf0f4}.nav-dropdown-menu:before{display:none}.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{transform:none}.nav-dropdown-menu a{font-size:10px;padding:9px 10px}}
 .site-header.nav-hidden{transform:translateY(-100%)}
 .site-header.nav-scrolling{box-shadow:0 8px 24px rgba(23,32,46,.08)}
 body{padding-top:88px}
