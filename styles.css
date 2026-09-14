@@ -27,7 +27,7 @@ html,body{overflow-x:hidden}
 .path-card:hover .path-art{transform:rotate(2deg) scale(1.06);box-shadow:0 13px 23px rgba(23,32,46,.18)}
 .path-card:hover .path-art img{transform:scale(1.1);filter:saturate(1)}
 .path-card h3{position:relative;z-index:1;margin-top:57px!important}
-.testimonial-section .large-quote{transition:opacity .38s ease,transform .38s cubic-bezier(.2,.7,.2,1)}
+.testimonial-section .large-quote{transition:opacity .24s ease,transform .24s cubic-bezier(.22,1,.36,1)}
 .person-avatar{object-fit:cover;overflow:hidden}
 .site-header{position:fixed!important;top:0;left:0;width:100%;z-index:10;background:rgba(248,247,243,.94);backdrop-filter:blur(12px);transition:transform .28s ease,box-shadow .28s ease}
 .nav-cta{display:inline-flex;align-items:center;gap:7px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:5px}

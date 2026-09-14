@@ -1,12 +1,16 @@
 lucide.createIcons();
 
 const heroSlides = document.querySelectorAll('.hero-slide');
+const heroSlideCount = document.querySelector('.hero-slide-count');
+const heroSlideProgress = document.querySelector('.hero-slide-line span');
 let heroSlideIndex = 0;
 
 const showHeroSlide = (nextIndex) => {
   heroSlides[heroSlideIndex].classList.remove('is-active');
   heroSlideIndex = nextIndex % heroSlides.length;
   heroSlides[heroSlideIndex].classList.add('is-active');
+  if (heroSlideCount) heroSlideCount.textContent = String(heroSlideIndex + 1).padStart(2, '0');
+  if (heroSlideProgress) heroSlideProgress.style.width = `${((heroSlideIndex + 1) / heroSlides.length) * 100}%`;
 };
 
 if (heroSlides.length > 1) {
@@ -15,11 +19,8 @@ if (heroSlides.length > 1) {
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('#nav-links');
-const siteHeader = document.querySelector('.site-header');
 const coursesDropdown = document.querySelector('.nav-dropdown');
 const coursesTrigger = document.querySelector('.nav-dropdown-trigger');
-let lastScrollY = window.scrollY;
-let showHeaderTimer;
 
 const setCoursesExpanded = (isExpanded) => {
   coursesTrigger.setAttribute('aria-expanded', isExpanded);
@@ -29,31 +30,6 @@ coursesDropdown.addEventListener('mouseenter', () => setCoursesExpanded(true));
 coursesDropdown.addEventListener('mouseleave', () => setCoursesExpanded(false));
 coursesTrigger.addEventListener('focus', () => setCoursesExpanded(true));
 coursesTrigger.addEventListener('blur', () => setCoursesExpanded(false));
-
-const showHeader = () => {
-  siteHeader.classList.remove('nav-hidden');
-  clearTimeout(showHeaderTimer);
-  siteHeader.classList.remove('nav-scrolling');
-};
-
-window.addEventListener('scroll', () => {
-  const currentScrollY = window.scrollY;
-  const scrollingDown = currentScrollY > lastScrollY && currentScrollY > 88;
-
-  siteHeader.classList.toggle('nav-scrolling', currentScrollY > 12);
-  if (navLinks.classList.contains('open') || !scrollingDown) {
-    showHeader();
-  } else {
-    siteHeader.classList.add('nav-hidden');
-    clearTimeout(showHeaderTimer);
-    showHeaderTimer = setTimeout(() => {
-      siteHeader.classList.remove('nav-hidden');
-      siteHeader.classList.remove('nav-scrolling');
-    }, 650);
-  }
-
-  lastScrollY = currentScrollY;
-}, { passive: true });
 
 menuToggle.addEventListener('click', () => {
   const isOpen = navLinks.classList.toggle('open');
@@ -115,7 +91,7 @@ const renderStory = (direction) => {
     personAvatar.alt = story.name;
     quote.style.opacity = '1';
     quote.style.transform = 'translateY(0)';
-  }, 160);
+  }, 100);
 };
 
 document.querySelectorAll('.quote-controls .icon-button').forEach((button, index) => {
@@ -126,7 +102,7 @@ document.querySelectorAll('.quote-controls .icon-button').forEach((button, index
 
 const startTestimonialAutoSlide = () => {
   clearInterval(testimonialTimer);
-  testimonialTimer = setInterval(() => renderStory(1), 6000);
+  testimonialTimer = setInterval(() => renderStory(1), 4000);
 };
 
 testimonialSection.addEventListener('mouseenter', () => clearInterval(testimonialTimer));
