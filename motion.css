@@ -53,7 +53,7 @@ html.motion-enabled .reveal-group.is-visible>*:nth-child(4){transition-delay:210
 /* Homepage landing stage */
 .hero-fullbleed{position:relative;min-height:100svh;margin-top:-88px;margin-left:0;margin-right:0;max-width:none;width:100%;overflow:hidden;background:#142132;color:#fff;display:flex;align-items:center}
 .hero-fullbleed .hero-image-wrap{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;margin:0!important;z-index:0}
-.hero-fullbleed .hero-slide{border-radius:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 48%;opacity:0;transform:scale(1.03)!important;filter:saturate(.86) contrast(1.04);animation:none!important;transition:opacity 900ms var(--motion-ease),transform 6s var(--motion-ease)}
+.hero-fullbleed .hero-slide{position:absolute!important;inset:0!important;display:block!important;width:100vw!important;min-width:100vw!important;height:100vh!important;min-height:100vh!important;max-width:none!important;object-fit:cover!important;object-position:center 48%;border-radius:0!important;opacity:0;transform:scale(1.03)!important;filter:saturate(.86) contrast(1.04);animation:none!important;transition:opacity 900ms var(--motion-ease),transform 6s var(--motion-ease)}
 .hero-fullbleed .hero-slide.is-active{transform:scale(1)!important}
 .hero-fullbleed .hero-slide.is-active{opacity:1}
 .brand-logo{width:220px!important;height:76px!important;object-fit:cover!important;object-position:center!important}
